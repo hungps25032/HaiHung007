@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="giohang">
+        <a onclick="anhien();laydon()"><img src="images/cart.png"><span id="countsp">0</span></a>
+    </div>
+     <div id="showcart">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền ($)</th>
+            </tr>
+            <tbody id="mycart">
+ 
+            </tbody>
+
+        </table>
+    </div> 
+    <div class="boxcenter">
+        <div class="row mb header">
+            <h1> SIÊU THỊ TRỰC TUYẾN</h1>
+        </div>
+
+        <div class="row mb menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="cart.html">Giỏ hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+                <li><a href="dangky.html">Đăng ký thành viên</a></li>
+            </ul>
+        </div>
+        <div class="row mb ">
+            <div class="row">
+                <div class="banner mb">
+        <div id="kq">
+            <img id="hinh"  align='center' width="100%" height="100%">
+            <div class="dieuhuong">
+                <i class="fa fa-chevron-circle-left" onclick="prev()"></i>
+                <i class="fa fa-chevron-circle-right" onclick="next()"></i>
+            </div>
+            <div id="sohinh" align='center'></div>
+        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/h1.jpg" alt=""></div>
+                    <p><span>359.000</span>$</p>
+                    <a href="#">Pond's White Beauty</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/h1.jpg" alt=""></div>
+                    <p><span>115.000</span>$</p>
+                    <a href="#">Simple Toner </a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/h2.jpg" alt=""></div>
+                    <p><span>94.000</span>$</p>
+                    <a href="#">Sữa Rửa Mặt Simple</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/h3.jpg"alt=""></div>
+                    <p><span>237.000</span>$</p>
+                    <a href="#">Kem Dưỡng Ngăn Ngừa Lão Hóa</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/h4.jpg"  alt=""></div>
+                    <p><span>117.000</span>$</p>
+                    <a href="#">Sữa tẩy trang Dove serum</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/h5.jpg" alt=""></div>
+                    <p><span>90.000</span>$</p>
+                    <a href="#">Kem Sữa Rửa Mặt Dưỡng Trắng</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/h6.jpg" alt=""></div>
+                    <p><span>115.000</span>$</p>
+                    <a href="#">Pond's White Beautya</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/h7.jpg" alt=""></div>
+                    <p><span>133.000</span>4</p>
+                    <a href="#">Serum Dưỡng Tóc </a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/h8.jpg" alt=""></div>
+                    <p><span>117.000</span>$</p>
+                    <a href="#">Sữa tẩy trang Dove serum</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+    <script>
+        showcountsp();
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+
+<html>
+    <head>
+        <title>Bùi Hải Hưng-Ps25032</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+        <meta charset="utf-8">
+
+        <style>
+            body{
+                background-color: gray;
+                font-family: arial;
+            }
+            #slide h2{
+                text-align: center; 
+                color: tomato;
+                font-size: 30px;
+            }
+            #slide{
+                width: 1000px;
+                height: 600px;
+                margin: 0 auto;
+                position: relative;
+            }
+            #slide img{
+                width: 100%;
+                height: 100%;
+            }
+            #slide i:first-child{
+                position: absolute;
+                top: 55%;
+                left: 30px;
+                color: white;
+                font-size: 40px;
+            }
+            #slide i:last-child{
+                position: absolute;
+                top: 55%;
+                right: 30px;
+                color: white;
+                font-size: 40px;
+            }
+            #slide p#dem{
+                margin: 0;
+                padding: 10px 0;
+                background-color: black;
+                color: white;
+                text-align: center;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            #slide #mota{
+                position: absolute;
+                top: 20%;
+                right: 50px;
+                color: darkgoldenrod;
+                font-size: 20px;
+                background-color: darkgray;
+                opacity: 0.8;
+                display: block;
+                padding: 15px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="slide">
+            <h2>Album ảnh cầu thủ Cristiano Ronaldo</h2>
+            <img id="hinh" src="images/1.jpg">
+            <div class="dieuhuong">
+                <i class="fa fa-chevron-circle-left" onclick="prev()"></i>
+                <i class="fa fa-chevron-circle-right" onclick="next()"></i>
+            </div>
+            <span id="mota"></span>
+            <p id="dem"></p>
+        </div>
+    </body>
+</html>
+<script>
+    var arr_hinh=[
+        "images/1.jpg",
+        "images/2.jpg",
+        "images/3.jpg",
+        "images/4.jpg",
+        "images/5.jpg",
+        "images/6.jpg",
+        "images/7.jpg",
+        "images/8.jpg",
+    ]
+    var index=0;
+    function next(){
+        index++;
+        if(index>=arr_hinh.length)index=0;
+
+        var hinh = document.getElementById("hinh");
+        hinh.src=arr_hinh[index];
+        document.getElementById("dem").innerHTML= index +"/" + arr_hinh.length;
+        document.getElementById("mota").innerHTML= arr_mota[index];
+    }
+    function prev(){
+        index--;
+        if(index<0) index = arr_hinh.lenghth -1;
+        document.getElementById("hinh").src=arr_hinh[index];
+        document.getElementById("dem").innerHTML= index +"/" + arr_hinh.length;
+        document.getElementById("mota").innerHTML= arr_mota[index];
+    }
+    setInterval("next()", 3000);
+    </script>
